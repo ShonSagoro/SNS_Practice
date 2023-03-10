@@ -22,7 +22,7 @@ app.listen(port, () => console.log(`SNS App en el puerto: ${port}!`));
 app.post('/subscribe', (req, res) => {
     let params = {
         Protocol: 'EMAIL', 
-        TopicArn: '',
+        TopicArn: process.env.ARN_TOPIC,
         Endpoint: req.body.email
     };
 
